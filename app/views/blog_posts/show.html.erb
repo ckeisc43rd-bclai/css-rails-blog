@@ -4,3 +4,7 @@
     <%= @blog_post.updated_at %>
 </div>
 <a><%= @blog_post.body %></a>
+
+<div>
+    <%= button_to "Edit", edit_blog_post_path(@blog_post) %>
+</div>
