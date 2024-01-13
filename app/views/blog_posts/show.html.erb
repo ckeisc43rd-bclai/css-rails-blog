@@ -3,8 +3,12 @@
     <a>Last Update at</a>
     <%= @blog_post.updated_at %>
 </div>
+<div>
+    <a>By</a>
+    <%= @blog_post.user.username %>
+</div>
 <a><%= @blog_post.body %></a>
 
 <div>
-    <%= button_to "Edit", edit_blog_post_path(@blog_post) %>
+    <%= button_to "Edit", edit_blog_post_path(@blog_post), method: :get %>
 </div>

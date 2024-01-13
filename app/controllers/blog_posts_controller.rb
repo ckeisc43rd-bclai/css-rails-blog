@@ -18,6 +18,7 @@ class BlogPostsController < ApplicationController
 
     def create
         @blog_post = BlogPost.new(blog_post_params)
+        @blog_post.user = current_user
         if @blog_post.save
             redirect_to root_path
         else
@@ -26,7 +27,7 @@ class BlogPostsController < ApplicationController
     end
 
     def edit
-        @blog_post = BlogPost.find(params[:id])
+
     end
 
     def update
