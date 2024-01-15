@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   has_many :blogpost
+  has_many :comments
 
   def email_required?
     false

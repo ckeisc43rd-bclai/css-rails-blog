@@ -1,14 +1,22 @@
 <h1><%= @blog_post.title %></h1>
 <div>
-    <a>Last Update at</a>
-    <%= @blog_post.updated_at %>
+    <h3>Last Update at <%= @blog_post.updated_at %></h3>
+    
 </div>
 <div>
-    <a>By</a>
-    <%= @blog_post.user.username %>
+    <h3>By <%= @blog_post.user.username %></h3>
 </div>
 <a><%= @blog_post.body %></a>
 
 <div>
     <%= button_to "Edit", edit_blog_post_path(@blog_post), method: :get %>
 </div>
+
+<h2>Comments</h2>
+<% @blog_post.comments.each do |comment| %>
+    <%= comment.text %>
+<% end %>
+
+
+<%= render "comments/form", comment: @comment%>
+

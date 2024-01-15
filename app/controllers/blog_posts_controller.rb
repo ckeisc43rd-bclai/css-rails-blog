@@ -7,7 +7,7 @@ class BlogPostsController < ApplicationController
     end
 
     def show
-
+        @comment = @blog_post.comments.build
     rescue ActiveRecord::RecordNotFound
         redirect_to root_path
     end
