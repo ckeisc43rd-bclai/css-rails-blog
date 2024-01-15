@@ -10,12 +10,20 @@
             </div>
         <% end %>
     <div>
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+        <div>
+            <%= form.label :title %>
+        </div>
+        <div>
+            <%= form.text_field :title %>
+        </div>
     </div>
     <div>
-        <%= form.label :body %>
-        <%= form.text_area :body %>
+        <div>
+            <%= form.label :body %>
+        </div>
+        <div>
+            <%= form.text_area :body %>
+        </div>
     </div>
     <%= form.button %>
     <% end %>
