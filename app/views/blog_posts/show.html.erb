@@ -12,11 +12,7 @@
     <%= button_to "Edit", edit_blog_post_path(@blog_post), method: :get %>
 </div>
 
-<h2>Comments</h2>
-<% @blog_post.comments.each do |comment| %>
-    <%= comment.text %>
-<% end %>
+<h5>Comments</h5>
+<%= render partial: 'blog_posts/comment', collection: @blog_post.comments.reverse %>
 
-
-<%= render "comments/form", comment: @comment%>
-
+<%= render partial: 'comments/form' %>
