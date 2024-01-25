@@ -1,18 +1,20 @@
 <h1><%= @blog_post.title %></h1>
 <div>
-    <h3>Last Update at <%= @blog_post.updated_at %></h3>
-    
+    <h5>Last Update at <%= @blog_post.updated_at %></h5>
+    <h5>By <%= @blog_post.user.username %></h5>
 </div>
-<div>
-    <h3>By <%= @blog_post.user.username %></h3>
-</div>
-<a><%= @blog_post.body %></a>
 
 <div>
+    <h2><%= @blog_post.body %></h2>
+</div>
+
+<div>
+    <% if @blog_post.user == current_user %>
     <%= button_to "Edit", edit_blog_post_path(@blog_post), method: :get %>
+    <% end %>
 </div>
 
-<h5>Comments</h5>
+<h3>Comments</h3>
 <%= render partial: 'blog_posts/comment', collection: @blog_post.comments.reverse %>
 
 <%= render partial: 'comments/form' %>
