@@ -1,11 +1,11 @@
-<h3>Post a Comment</h3>
+<h3 class="text-light">Post a Comment</h3>
 
 <%= form_for [ @blog_post, @comment ] do |f| %>
-  <p>
+  <p class="text-light">
     <%= f.label :body %><br/>
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Submit', :class => "btn btn-secondary btn-outline-dark fw-bold" %>
   </p>
 <% end %>

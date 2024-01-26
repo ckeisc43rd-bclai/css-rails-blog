@@ -96,6 +96,8 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
+    cssbundling-rails (1.4.0)
+      railties (>= 6.0.0)
     date (3.3.4)
     debug (1.9.0)
       irb (~> 1.10)
@@ -109,6 +111,7 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
+    flat-ui-rails (0.0.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -259,8 +262,10 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  cssbundling-rails
   debug
   devise (~> 4.9)
+  flat-ui-rails (~> 0.0.1)
   importmap-rails
   jbuilder
   puma (>= 5.0)

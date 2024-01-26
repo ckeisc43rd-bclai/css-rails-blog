@@ -1,8 +1,9 @@
-<div>
+<div class="container mt-3">
     <% @blog_posts.reverse_each do |blog_post| %>
-        <div>
-            <h1><%= link_to blog_post.title, blog_post %></h1>
-            <%= blog_post.body %>
+        <div class="mb-3 rounded p-3 bg-light" style="--bs-bg-opacity: .3;">
+            <h1><%= link_to blog_post.title, blog_post, class: "link-light" %></h1>
+                <h3 class="text-light"><%= blog_post.body %></h3>
+            <h5 class="text-light opacity-75"><%= blog_post.comments.size() %> comments</h5>
         </div>
     <% end %>
 </div>

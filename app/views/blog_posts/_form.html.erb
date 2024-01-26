@@ -14,17 +14,17 @@
             <%= form.label :title %>
         </div>
         <div>
-            <%= form.text_field :title %>
+            <%= form.text_field :title, :placeholder => "cjtsai is dasabi" %>
         </div>
     </div>
-    <div>
+    <div class="my-3">
         <div>
             <%= form.label :body %>
         </div>
         <div>
-            <%= form.text_area :body %>
+            <%= form.text_area :body, :placeholder => "bclai is good" %>
         </div>
     </div>
-    <%= form.button %>
+    <%= form.button :class => "btn btn-secondary btn-outline-dark fw-bold" %>
     <% end %>
 </div>

@@ -67,3 +67,7 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem "cssbundling-rails"
+
+gem 'flat-ui-rails', '~> 0.0.1'
